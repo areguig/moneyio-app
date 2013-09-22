@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<!-- CSS -->
+		<link rel="stylesheet" href="styles/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="styles/main.css" />
+		<link rel="stylesheet" href="styles/elements.css" />
+
+		<!-- JS -->
+		<script src="js/cordova.js"></script>
+		<script src="js/jquery-1.9.1.js"></script>
+		<script src="js/jquery-ui-1.10.3.custom.js"></script>
+
+
+		<script src="js/iscroll-lite.js"></script>
+
+		<!-- custom JS -->
+		<script src="js/databaseManagement.js"></script>
+		<script src="js/htmlGenerator.js"></script>
+		<script src="js/index.js"></script>
+
+
+		<title>MoneyI/O</title>
+	</head>
+	<body>
+		<header>
+			<img src="images/money_i-o.png" /> MoneyI/O
+		</header>
+		<div id="wrapper">
+			<div id="main-content">
+				<div id="pages">
+					<div id="home" class="current">
+						<!-- Home page header -->
+						<div class="home-header">
+							
+						</div>
+						<!-- Home page Content -->
+						<div class="home-content">
+							<div class="elments">
+								<div class="element">
+									<div class="element-logo in">
+										<img src='images/input.png'/>
+									</div>
+									<div class="element-content">
+										<div class="contact"> 
+											<a href="tel:0685897912" >Akli Reguig</a> 
+										</div>
+										<br/>
+										<div class="amount">20000&#x20AC;</div>
+										<br/>
+										<div class ="details">
+											<div class="dates">
+												<div class="loan-date">
+													01/02/2013
+												</div>
+												<br/>
+												<div class="return-date">
+													08/08/2014
+												</div>
+												<br/>
+												<div class="comment">
+													Je suis un commentaire
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class ="element-actions">
+										<a href="#" class="hide-details zip-button"> - </a>
+										<br/>
+										<a href="#" class="delete"> Delete </a>
+										<br/>
+										<a href="#" class="modify"> Modify</a>
+										<br/>
+										<a href="#"  class="calendar-event"> Add event to calendar</a>
+									</div>
+								</div>
+							
+							<br/>
+																<div class="element">
+									<div class="element-logo in">
+										<img src='images/input.png'/>
+									</div>
+									<div class="element-content">
+										<div class="contact"> 
+											<a href="tel:0685897912" >Akli Reguig</a> 
+										</div>
+										<br/>
+										<div class="amount">20000&#x20AC;</div>
+										<br/>
+										<div class ="details">
+											<div class="dates">
+												<div class="loan-date">
+													01/02/2013
+												</div>
+												<br/>
+												<div class="return-date">
+													08/08/2014
+												</div>
+												<br/>
+												<div class="comment">
+													Je suis un commentaire
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class ="element-actions">
+										<a href="#" class="hide-details zip-button"> - </a>
+										<br/>
+										<a href="#" class="delete"> Delete </a>
+										<br/>
+										<a href="#" class="modify"> Modify</a>
+										<br/>
+										<a href="#"  class="calendar-event"> Add event to calendar</a>
+									</div>
+								</div>
+							</div><!--End elements div	-->													
+						</div><!--End home-content div	-->		
+						<!-- Home page footer -->
+						<div class="home-footer">
+							
+						</div>	
+					</div>
+
+					<div id="add">
+						<form id='addForm' name="addForm" action="" method="post">
+							Add an entry to the list of problems </br>
+							<div>
+								<table>
+									<tr>
+										<td>Kind </td>
+										<td>
+											<input type="radio" name="kind" value="IN" checked="checked">IN
+											<input type="radio" name="kind" value="OUT"> OUT
+										</td>
+									</tr>
+									<tr>
+										<td>FirstName* </td>
+										<td><input type="text" name="firstname" placeholder="firstname" ></td>
+									</tr>
+									<tr>
+										<td>LastName </td>
+										<td><input type="text" name="lastname" placeholder="lastname"></td>
+									</tr>
+									<tr>
+										<td>Amount* </td>
+										<td><input type="number" name="amount" placeholder="0" ></td>
+									</tr>
+									<tr>
+										<td>Loan date* </td>
+										<td><input type="text" name="loandate" class="calendar" ></td>
+									</tr>
+									<tr>
+										<td>Return date </td>
+										<td><input type="text" name="returndate" class="calendar"></td>
+									</tr>
+									<tr>
+										<td>Comment </td>
+										<td><textarea name="comment"> </textarea></td>
+									</tr>
+									<tr>
+										<td> </td>
+										<td><input type="submit" name="addSubmit" value="Add" /></td>
+									</tr>
+								</table>
+							</div>
+						</form>
+					</div>
+
+					<div id="archives">
+						<a href="tel:0685897912" >call 44444444444444444444444</a>
+
+							<img src="images/input.png"/>
+								<table class="">
+									<tr>
+										<td onclick="hideDisplayDetails('TestID');"> 200 &#x20AC;</td>
+										<td> <a  onclick="getContact('Reguig');" >Akli Reguig</a></td>
+									</tr>
+									<tbody id="details_TestID" class="details" style="display:none">
+										<tr>
+											<td>Since 01/02/2013</td>
+											<td>To 01/08/2013 <a>Add an event to the calendar</a></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>Ceci est un commentaire</td>
+										</tr>
+									</tbody>
+								</table>
+
+					</div>
+					<div id="dialog" title="Contact">
+  						<p><a href="tel:1111" >call</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<ul id="tab-bar">
+				<li>
+					<a href="#home">Home</a>
+				</li>
+				<li>
+					<a href="#add">Add</a>
+				</li>
+				<li>
+					<a href="#archives">Archives</a>
+				</li>
+			</ul>
+		</footer>
+	</body>

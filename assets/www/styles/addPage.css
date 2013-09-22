@@ -1,0 +1,33 @@
+form,input,select,textarea{
+	margin:0; padding: 0;
+}
+
+div.box{
+	margin:0 auto;
+	width: 100%;
+	position:relative;
+	top:5px;
+	border: 1px solid rgb(50, 160, 221);
+}
+
+div.box h1{
+	text-transform: uppercase;
+	padding:5px 0 5px 5px;
+	border-bottom: 1px solid rgb(50, 160, 221);
+	border-top: 1px solid rgb(50, 160, 221);
+}
+
+div.box label{
+	width: 100%;
+	display: block;
+	border-top: 1px solid rgb(50, 160, 221);
+	border-bottom: 1px solid rgb(50, 160, 221);
+	padding 10px 0 10px 0;
+}
+
+div.box label span{
+	display:block;
+	float:left;
+	text-align:right;
+	padding:5px 20px 0 0;
+}

@@ -1,0 +1,51 @@
+#home div.element{
+	width: 100%;
+}
+#home div.element{
+	display:inline-block ;
+	height:auto;
+	width: 100%;
+	border-bottom-style: dashed;
+	border-bottom-width: 2px;
+	border-bottom-color: #C5C5C5;
+}
+
+#home div.element div{
+	float:left;
+}
+
+#home div.element a {
+	color: #67A2C0;
+}
+
+#home div.element-logo, #home div.element-actions{
+	width:25%;
+}
+#home div.element-content{
+	width: 50%;
+}
+a.button{
+	background-image: url("../images/delete-button.png") ;
+	background-size: 100%;
+	}
+
+#home div.element div.details{
+	display:none;
+}
+
+#home div.element div.element-actions{
+	display:none;
+}
+
+#home div.element a.zip-button{
+	background: url("../images/bouton_off.gif") repeat-x scroll left bottom transparent;
+    border: 1px solid #C5C5C5;
+    color: #222;
+    font-size: 90%;
+    font-weight: bold;
+    height: 15px;
+    line-height: 16px !important;
+    padding: 0 4px;
+    text-decoration: none;
+    float:right;
+}
