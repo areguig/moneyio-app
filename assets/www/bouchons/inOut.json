@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "kind": "IN",
+        "firstname": "FirstName",
+        "lastname": "LastName",
+        "amount": "1000",
+        "loandate": "01/01/2009",
+        "returndate": "01/01/2014",
+        "comment": "je suis un commentaire"
+    },
+    {
+        "id": "2",
+        "kind": "OUT",
+        "firstname": "FirstName1",
+        "lastname": "LastName1",
+        "amount": "1000",
+        "loandate": "01/01/2009",
+        "returndate": "01/01/2014",
+        "comment": "je suis un commentaire"
+    }
+]

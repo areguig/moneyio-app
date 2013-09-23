@@ -16,7 +16,7 @@ $(document).ready(function(){
  
 if(ACTIVE_BOUHCONS)
 {
-    displayDataBOUCHONS();
+    getDataFromBOUCHON();
 }
 else
 {
@@ -24,8 +24,6 @@ else
     dbShell.transaction(createTables,errorCB,successCB);
     dbShell.transaction(queryDB,errorCB);
 }
-
-
 
 /**
  *End Document Ready 
@@ -47,7 +45,7 @@ function queryDB(tx)
 
 function querySuccess(tx, results){
 
-	//displayData(results,"#home");
+	displayDataDB(results,"#home");
 }
 
 function errorCB(err)
@@ -106,8 +104,11 @@ function saveData(data)
 	});
 }
 
-function displayDataBOUCHONS(){
-    
+function getDataFromBOUCHON(){
+    $.getJSON('bouchons/inOut.json', function(inout) {
+        displayDataBOUCHON(inout,'#elements');
+        setElementsEvents();
+    });
 }
 
 

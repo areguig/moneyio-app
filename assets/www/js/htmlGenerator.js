@@ -6,12 +6,17 @@ function Generator () {
 		result+="id=\'"+id+"\' ";
 		
 		//setting the list of classes 
-		result+="class=`";
+		result+="class=\'";
 		for(var i = 0; i < classes.length; i++)
 		{
-			result+= classes[i]+" ";
+		    
+			result+=classes[i];
+			if(i<classes.length-1)
+			 {
+			     result+=" ";
+			 }
 		}	
-		result+="\'>";
+		result+="\' >";
 		
 		//setting the div content
 		for(var j = 0; j < content.length; j++)
