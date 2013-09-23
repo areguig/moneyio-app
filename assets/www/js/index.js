@@ -1,3 +1,11 @@
+/*
+* Statics
+*/
+
+var 
+
+
+
 $(document).ready(function() {
 
 	var theScroll;

@@ -6,7 +6,7 @@ function Generator () {
 		result+="id=\'"+id+"\' ";
 		
 		//setting the list of classes 
-		result+="class=\`";
+		result+="class=`";
 		for(var i = 0; i < classes.length; i++)
 		{
 			result+= classes[i]+" ";
@@ -14,9 +14,9 @@ function Generator () {
 		result+="\'>";
 		
 		//setting the div content
-		for(var i = 0; i < content.length; i++)
+		for(var j = 0; j < content.length; j++)
 		{
-			result+= content[i];
+			result+= content[j];
 		}
 		result +=" ";
 		return result;
@@ -36,7 +36,7 @@ function Generator () {
 	{
 		var result = "<a ";
 		result += "href=\'";
-		if(href == undefined || href == null)
+		if(href === undefined || href === null)
 		{
 			result+="#"
 		}
