@@ -2,10 +2,6 @@
 * Statics
 */
 
-var 
-
-
-
 $(document).ready(function() {
 
 	var theScroll;
@@ -56,7 +52,7 @@ $(document).ready(function() {
 	});
 
 	/**
-	 * Submiting the 'add' form
+	 * Submit the 'add' form
 	 */
 	//$('#addForm').validate();
 
@@ -72,6 +68,10 @@ $(document).ready(function() {
 			return false;
 		}
 	});
+	
+	/**
+	* Calendar 
+	*/
 
 	$('#add input.calendar').focus(function() {
 		this.blur();

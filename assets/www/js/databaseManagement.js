@@ -1,14 +1,29 @@
-var dbShell
+var dbShell;
+
+
+var ACTIVE_BOUHCONS = true; 
+
+var INOUT_TABLE_CREATE = "CREATE TABLE IF NOT EXISTS INOUT (id INTEGER PRIMARY KEY AUTOINCREMENT,kind,firstname,lastname,amount,loanDate,returnDate,comment)";
+var ARCHIVES_TABLE_CREATE = "CREATE TABLE IF NOT EXISTS ARCHIVES(id INTEGER PRIMARY KEY AUTOINCREMENT,kind,firstname,lastname,amount,loanDate,returnDate,archiveDate,comment)";
+
+
 $(document).ready(function(){
+
 
 /**
  * The database
  */
-dbShell = window.openDatabase("mainDB", "1","nameDB",10000 );
-dbShell.transaction(createTables,errorCB,successCB);
-dbShell.transaction(queryDB,errorCB);
-
-
+ 
+if(ACTIVE_BOUHCONS)
+{
+    displayDataBOUCHONS();
+}
+else
+{
+    dbShell = window.openDatabase("mainDB", "1","nameDB",10000 );
+    dbShell.transaction(createTables,errorCB,successCB);
+    dbShell.transaction(queryDB,errorCB);
+}
 
 
 
@@ -19,8 +34,8 @@ dbShell.transaction(queryDB,errorCB);
 
 function createTables(tx){
 	
-	tx.executeSql('CREATE TABLE IF NOT EXISTS INOUT (id INTEGER PRIMARY KEY AUTOINCREMENT,kind,firstname,lastname,amount,loanDate,returnDate,comment)');
-	tx.executeSql('CREATE TABLE IF NOT EXISTS ARCHIVES(id INTEGER PRIMARY KEY AUTOINCREMENT,kind,firstname,lastname,amount,loanDate,returnDate,archiveDate,comment)');
+	tx.executeSql(INOUT_TABLE_CREATE);
+	tx.executeSql(ARCHIVES_TABLE_CREATE);
 }
 
 
@@ -90,3 +105,12 @@ function saveData(data)
 		tx.executeSql('INSERT INTO INOUT(kind,firstname,lastname,amount,loanDate,returnDate,comment) VALUES ("'+kind+'","'+firstname+'","'+lastname+'","'+amount+'","'+loanDate+'","'+returnDate+'","'+comment+'")')
 	});
 }
+
+function displayDataBOUCHONS(){
+    
+}
+
+
+
+
+
